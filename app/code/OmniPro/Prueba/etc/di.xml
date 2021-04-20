@@ -17,4 +17,7 @@
             <argument name="resourceModel" xsi:type="string">OmniPro\Prueba\Model\ResourceModel\Blog</argument>
         </arguments>
     </virtualType>
+    <type name="OmniPro\Prueba\Api\BlogRepositoryInterface">
+        <plugin name="omnipro_blog_repository_plugin" type="OmniPro\Prueba\Plugin\BlogRepositoryPlugin" sortOrder="1" disabled="false"/>
+    </type>
 </config>

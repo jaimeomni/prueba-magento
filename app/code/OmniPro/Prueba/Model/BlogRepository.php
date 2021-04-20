@@ -127,7 +127,7 @@ class BlogRepository implements \OmniPro\Prueba\Api\BlogRepositoryInterface
 
         $path = $result['file']; */
 
-        $mediaDirectory = $this->filesystem->getDirectoryRead(DirectoryList::MEDIA);
+        /* $mediaDirectory = $this->filesystem->getDirectoryRead(DirectoryList::MEDIA);
         $destinationPath = $mediaDirectory->getAbsolutePath('blog/post/');
 
         $data = $blog->getImg();
@@ -138,7 +138,7 @@ class BlogRepository implements \OmniPro\Prueba\Api\BlogRepositoryInterface
         $finalFileName = $fileName . uniqid() . '.png';
         file_put_contents($destinationPath . $finalFileName, $data);
 
-        $blog->setImg('blog/post/' . $finalFileName);
+        $blog->setImg('blog/post/' . $finalFileName); */
         //$fileContent = base64_decode($data[1], true);
 
         $blog->getResource()->save($blog);

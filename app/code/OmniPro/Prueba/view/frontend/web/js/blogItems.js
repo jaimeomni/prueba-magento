@@ -14,14 +14,15 @@ define([
             email: '',
             image: '',
             imageBase64: '',
+            imageType: '',
             blogs: [],
-            blogsUrl: '/rest/V1/blogs?searchCriteria',
+            blogsUrl: 'rest/V1/blogs?searchCriteria',
             blogPostUrl: 'rest/V1/blogs'
         },
         initialize: function () {
             this._super();
             this.getBlogs();
-            this.titulo.subscribe(function(value) {
+            this.titulo.subscribe(function (value) {
                 console.log(value)
             });
             var blogs1 = "/rest/V1/blogs?searchCriteria";
@@ -39,7 +40,8 @@ define([
                     'contenido',
                     'email',
                     'image',
-                    'imageBase64'
+                    'imageBase64',
+                    'imageType'
                 ])
                 .observe({
                     blogs: []
@@ -48,14 +50,20 @@ define([
             return this;
         },
         isFormValid: function (form) {
-            return $(form).validation() &&  $(form).validation('isValid');
+            return $(form).validation() && $(form).validation('isValid');
         },
         changeImage: function (data, event) {
             var image = event.target.files[0];
             var reader = new FileReader();
             reader.readAsDataURL(image);
-            reader.onload = $.proxy(function(e) {
-                this.imageBase64(reader.result);
+            reader.onload = $.proxy(function (e) {
+                var base64 = reader.result;
+                this.imageBase64(base64.split(',', 2)[1]);
+                this.imageType(base64.split(';', 2)[0].split(':', 2)[1]);
+                /* var base64 = reader.result
+                    .replace("data:", "")
+                    .replace(/^.+,/, "") */
+                //this.imageBase64(base64);
             }, this);
         },
         sendBlog: function (form) {
@@ -67,9 +75,17 @@ define([
                     "title": this.titulo(),
                     "email": this.email(),
                     "content": this.contenido(),
-                    "img": this.imageBase64()
+                    "img": "",
+                    "extension_attributes": {
+                        "image": {
+                            "name": "prueba_imagen.png",
+                            "base64_encoded_data": this.imageBase64(),
+                            "type": this.imageType()
+                        }
+                    }
                 }
             };
+            console.log(blog);
             storage.post(this.blogPostUrl, JSON.stringify(blog))
                 .then($.proxy(function () {
                     this.getBlogs();

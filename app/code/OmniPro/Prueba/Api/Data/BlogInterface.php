@@ -1,7 +1,7 @@
 <?php
 namespace OmniPro\Prueba\Api\Data;
 
-interface BlogInterface {
+interface BlogInterface extends \Magento\Framework\Api\ExtensibleDataInterface {
 
     /**
      * Return ID
@@ -83,4 +83,19 @@ interface BlogInterface {
      * @return void
      */
     public function getCreatedDateTime();
+
+    /**
+     * Retrieve existing extension attributes object or create a new one.
+     *
+     * @return \OmniPro\Prueba\Api\Data\BlogExtensionInterface|null
+     */
+    public function getExtensionAttributes();
+
+    /**
+     * Set an extension attributes object.
+     *
+     * @param \OmniPro\Prueba\Api\Data\BlogExtensionInterface $extensionAttributes
+     * @return $this
+     */
+    public function setExtensionAttributes(\OmniPro\Prueba\Api\Data\BlogExtensionInterface $extensionAttributes);
 }
