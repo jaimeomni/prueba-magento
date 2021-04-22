@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="OmniPro_JaimeSantana::css/styles.css" />
+    </head>
+    <body>
+        <referenceContainer name="header.container" remove="true" />
+        <referenceBlock name="catalog.topnav" remove="true" />
+        <referenceContainer name="footer-container" remove="true" />
+        <referenceBlock name="copyright" remove="true" />
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="OmniPro_JaimeSantana_Name" template="OmniPro_JaimeSantana::index.phtml" />
+        </referenceContainer>
+    </body>
+</page>
