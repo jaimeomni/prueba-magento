@@ -3,7 +3,7 @@
 /** @var \OmniPro\JaimeSantana\Block\Template $block */
 ?>
 
-<nav>
+<!-- <nav>
     <ul>
         <li>Inicio</li>
         <li>Servicios</li>
@@ -12,6 +12,21 @@
         <li>Contácto</li>
         <li>Términos y Condiciones</li>
     </ul>
+</nav> -->
+
+<nav id="hamnav">
+    <!-- [THE HAMBURGER] -->
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger" />
+
+    <!-- [MENU ITEMS] -->
+    <div id="hamitems">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="tech.html">Tech</a>
+        <a href="games.html">Games</a>
+        <a href="reviews.html">Reviews</a>
+    </div>
 </nav>
 
 <div class="tabBox">
@@ -35,9 +50,10 @@
                 </label>
                 <label for="switch">Subscribirse al Newsletter</label>
             </div>
-            <br>
             <button type="submit">Ingreso</button>
-            <button type="submit">Olvide contraseña</button>
+            <div class="forgotPass">
+                <a href="">Olvide contraseña</a>
+            </div>
         </form>
     </div>
 

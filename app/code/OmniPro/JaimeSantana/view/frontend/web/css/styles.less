@@ -7,7 +7,7 @@ body {
 
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
+    //border: 1px solid #ccc;
 }
   
   /* Style the buttons that are used to open the tab content */
@@ -41,8 +41,8 @@ body {
     //opacity: 0.9;
     color: #FFF;
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
+    padding: 1.5rem 1.5rem;
+    //border: 1px solid #ccc;
     border-top: none;
 }
 
@@ -91,9 +91,9 @@ body {
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
 
-  .slider:before {
+.slider:before {
     position: absolute;
     content: "";
     height: 1.3rem;
@@ -103,32 +103,80 @@ body {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
   
-  input:checked + .slider {
+input:checked + .slider {
     background-color: #2196F3;
-  }
+}
   
-  input:focus + .slider {
+input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
-  }
+}
   
-  input:checked + .slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(1.3rem);
     -ms-transform: translateX(1.3rem);
     transform: translateX(1.3rem);
-  }
+}
   
-  /* Rounded sliders */
-  .slider.round {
+/* Rounded sliders */
+.slider.round {
     border-radius: 1.5rem;
-  }
+}
   
-  .slider.round:before {
+.slider.round:before {
     border-radius: 50%;
-  }
+}
   
-  .news{
-      display: flex;
-      align-items: center;
-  }
+.news{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabcontent button{
+    display: block;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 1.5rem;
+    width: 100%;
+    background: linear-gradient(90deg, #8DE7ED 2.31%, #2FCEC5 100%);
+}
+
+.forgotPass{
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.forgotPass a{
+    color: #FFF;
+}
+
+
+/* Show Hamburger Icon */
+#hamnav label { 
+    display: inline-block; 
+    color: white;
+    background: #a02620;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+/* Break down menu items into vertical */
+#hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+}
+
+/* Toggle Show/Hide Menu */
+#hamitems { display: none; }
+#hamnav input:checked ~ #hamitems { display: block; }
+
+#hamburger{
+    display: none;
+}
+
