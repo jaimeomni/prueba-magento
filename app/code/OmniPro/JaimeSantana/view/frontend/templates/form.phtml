@@ -9,33 +9,33 @@
 
 <div class="tabBox">
 
-    <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'form-login')" id="defaultOpen">Login</button>
-        <button class="tablinks" onclick="openTab(event, 'form-register')" id="btnRegister">Register</button>
+    <div class="tabBox__tab">
+        <button class="tabBox__tablinks" onclick="openTab(event, 'form-login')" id="defaultOpen">Login</button>
+        <button class="tabBox__tablinks" onclick="openTab(event, 'form-register')" id="btnRegister">Register</button>
     </div>
 
-    <div id="form-login" class="tabcontent">
+    <div id="form-login" class="tabBox__tabcontent">
         <form onsubmit="return false">
             <label for="login-email">EMAIL</label>
             <input type="email" id="login-email" placeholder="example@email.com" required>
             <label for="login-password">CONTRASEÑA</label>
             <input type="password" id="login-password" placeholder="******" required>
-            <div class="news">
+            <div class="tabBox__news">
 
-                <label class="switch" id="switch">
-                    <input type="checkbox" class="form-checkbox">
-                    <span class="slider round"></span>
+                <label class="tabBox__switch" id="switch">
+                    <input type="checkbox" class="tabBox__form-checkbox">
+                    <span class="tabBox__slider round"></span>
                 </label>
                 <label for="switch">Subscribirse al Newsletter</label>
             </div>
             <button type="submit" action="" onclick="success()">Ingreso</button>
-            <div class="forgotPass">
+            <div class="tabBox__forgotPass">
                 <a href="">Olvide contraseña</a>
             </div>
         </form>
     </div>
 
-    <div id="form-register" class="tabcontent">
+    <div id="form-register" class="tabBox__tabcontent">
         <form>
             <label for="firstname">NOMBRE</label>
             <input type="text" id="firstname" required>
