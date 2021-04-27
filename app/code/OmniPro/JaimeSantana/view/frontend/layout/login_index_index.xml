@@ -10,7 +10,10 @@
         <referenceContainer name="footer-container" remove="true" />
         <referenceBlock name="copyright" remove="true" />
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" name="OmniPro_JaimeSantana_Name" template="OmniPro_JaimeSantana::index.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="OmniPro_JaimeSantana_BackImages" template="OmniPro_JaimeSantana::backimages.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="OmniPro_JaimeSantana_Nav" template="OmniPro_JaimeSantana::nav.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="OmniPro_JaimeSantana_Logo" template="OmniPro_JaimeSantana::logo.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="OmniPro_JaimeSantana_Form" template="OmniPro_JaimeSantana::form.phtml" />
         </referenceContainer>
     </body>
 </page>

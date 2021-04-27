@@ -19,6 +19,19 @@ function openTab(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
+function success() {
+    console.log("Hola");
+
+    var success, tabBox;
+
+    tabBox = document.getElementsByClassName("tabBox");
+    tabBox.className +=" disabled";
+
+    success = document.getElementsByClassName("login-success");
+    success.className += " active";
+}
+
 window.onload = function (e) {
     document.getElementById("defaultOpen").click();
 }
+
