@@ -9,5 +9,6 @@
     <body>
         <referenceContainer name="product.info.stock.sku" remove="true"></referenceContainer>
         <referenceContainer name="product.info.social" remove="true"></referenceContainer>
+        <referenceContainer name="footer-container" remove="true"></referenceContainer>
     </body>
 </page>
