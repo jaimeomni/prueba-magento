@@ -1,126 +1,4 @@
-/* @media screen and (max-width: 640px) {
-    * {
-        font-family: Dosis;
-    }
-    html {
-        font-size: 100%;
-    }
-
-    body {
-        background: #393FD0;
-    }
-
-    .page-main{
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-
-    .navbar {
-        height: 60px;
-    
-        .navbar__checkbox {
-            display: none;
-        }
-    
-        .navbar__checkbox:checked ~ .navbar__ul {
-            left: 0;            
-        }
-    
-        .navbar__checkbox:checked + .tabBox {
-            opacity: 0;
-        }
-    
-        .navbar__checklabel {
-            display: block;
-            float: right;
-            //margin-top: 15px;
-            margin-right: 1rem;
-            margin-top: 1rem;
-            cursor: pointer;
-    
-            img {
-                width: 1.9rem;
-                height: 1.9rem;
-            }
-    
-        }
-    
-        .navbar__ul {
-            position: fixed;
-            width: 94%;
-            height: 100vh;
-            background-color: #393FD0;
-            ;
-            top: 60px;
-            left: -101%;
-            transition: all .5s;
-            z-index: 3;
-            padding-top: 15rem;
-    
-            .navbar__ul-li {
-                display: block;                              
-                line-height: 60px;
-                margin: 0;
-    
-                a {
-                    color: #FFF;  
-                    text-transform: uppercase;
-                }
-            }
-    
-        }
-    
-    }
-
-    .logo-r {
-        position: relative;
-        text-align: center;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        z-index: 4;
-    }
-    
-    .back-v {
-        position: absolute;
-        left: 15%;
-        z-index: 4;
-    }
-    
-    .back-a {
-        position: absolute;
-        left: 0;
-        top: 28%;
-        z-index: 1;
-    }
-    
-    .back-c {
-        position: absolute;
-        right: 0;
-        top: 25%;
-        z-index: 1;
-    }
-
-    .login-success{
-        display: none;
-    }
-
-    .login-success.active{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        width: 30rem;
-        height: 100%;
-        margin: auto;
-        background: #37D0C8;
-        z-index: 2;
-    }
-
-
-    
-  
-    
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
 
     .tabBox {
         margin: auto;
@@ -277,4 +155,22 @@
     .tabBox.disabled{
         display: none;
     }
-} */
+
+    .login-success{
+        display: none;
+    }
+
+    .login-success.active{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 30rem;
+        height: 100%;
+        margin: auto;
+        background: #37D0C8;
+        z-index: 2;
+    }
+
+
+}

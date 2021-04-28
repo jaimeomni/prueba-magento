@@ -1,0 +1,59 @@
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
+
+    .navbar {
+        height: 60px;
+    
+        .navbar__checkbox {
+            display: none;
+        }
+    
+        .navbar__checkbox:checked ~ .navbar__ul {
+            left: 0;            
+        }
+    
+        .navbar__checkbox:checked + .tabBox {
+            opacity: 0;
+        }
+    
+        .navbar__checklabel {
+            display: block;
+            float: right;
+            //margin-top: 15px;
+            margin-right: 1rem;
+            margin-top: 1rem;
+            cursor: pointer;
+    
+            img {
+                width: 1.9rem;
+                height: 1.9rem;
+            }
+    
+        }
+    
+        .navbar__ul {
+            position: fixed;
+            width: 94%;
+            height: 100vh;
+            background-color: #393FD0;
+            ;
+            top: 60px;
+            left: -101%;
+            transition: all .5s;
+            z-index: 3;
+            padding-top: 15rem;
+    
+            .navbar__ul-li {
+                display: block;                              
+                line-height: 60px;
+                margin: 0;
+    
+                a {
+                    color: #FFF;  
+                    text-transform: uppercase;
+                }
+            }
+    
+        }
+    
+    }
+}
