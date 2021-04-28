@@ -25,10 +25,14 @@ function success() {
     var success, tabBox;
 
     tabBox = document.getElementsByClassName("tabBox");
-    tabBox.className +=" disabled";
+    tabBox[0].className +=" disabled";
+
+    console.log(tabBox);
 
     success = document.getElementsByClassName("login-success");
-    success.className += " active";
+    success[0].className += " active";
+
+    console.log(success);
 }
 
 window.onload = function (e) {

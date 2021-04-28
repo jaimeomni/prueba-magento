@@ -4,18 +4,18 @@
 ?>
 
 <div class="login-success">
-    <img src="<?= $block->getViewFileUrl('OmniPro_JaimeSantana::images/menubar.svg') ?>">
+    <img src="<?= $block->getViewFileUrl('OmniPro_JaimeSantana::images/success-icon.svg') ?>">
 </div>
 
 <div class="tabBox">
 
     <div class="tabBox__tab">
-        <button class="tabBox__tablinks" onclick="openTab(event, 'form-login')" id="defaultOpen">Login</button>
-        <button class="tabBox__tablinks" onclick="openTab(event, 'form-register')" id="btnRegister">Register</button>
+        <button class="tabBox__tablinks" onclick="openTab(event, 'form-login')" id="defaultOpen">Ingreso</button>
+        <button class="tabBox__tablinks" onclick="openTab(event, 'form-register')" id="btnRegister">Registro</button>
     </div>
 
     <div id="form-login" class="tabBox__tabcontent">
-        <form onsubmit="return false">
+        <form onsubmit="return success()" action="https://app.prueba-magento.test/default/beaumont-summit-kit.html">
             <label for="login-email">EMAIL</label>
             <input type="email" id="login-email" placeholder="example@email.com" required>
             <label for="login-password">CONTRASEÑA</label>
@@ -28,7 +28,7 @@
                 </label>
                 <label for="switch">Subscribirse al Newsletter</label>
             </div>
-            <button type="submit" action="" onclick="success()">Ingreso</button>
+            <button type="submit">Ingreso</button>
             <div class="tabBox__forgotPass">
                 <a href="">Olvide contraseña</a>
             </div>
@@ -36,7 +36,7 @@
     </div>
 
     <div id="form-register" class="tabBox__tabcontent">
-        <form>
+        <form onsubmit="return success()">
             <label for="firstname">NOMBRE</label>
             <input type="text" id="firstname" required>
             <label for="lastname">APELLIDO</label>
