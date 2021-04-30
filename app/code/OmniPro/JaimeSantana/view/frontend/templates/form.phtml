@@ -10,23 +10,23 @@
 <div class="tabBox">
 
     <div class="tabBox__tab">
-        <button class="tabBox__tablinks" onclick="openTab(event, 'form-login')" id="defaultOpen">Ingreso</button>
-        <button class="tabBox__tablinks" onclick="openTab(event, 'form-register')" id="btnRegister">Registro</button>
+        <button class="tabBox__tablinks" onclick="openTab(event, 'form-login')" id="defaultOpen">INGRESO</button>
+        <button class="tabBox__tablinks" onclick="openTab(event, 'form-register')" id="btnRegister">REGISTRO</button>
     </div>
 
     <div id="form-login" class="tabBox__tabcontent">
         <form onsubmit="return success()" action="https://app.prueba-magento.test/default/beaumont-summit-kit.html">
             <label for="login-email">EMAIL</label>
-            <input type="email" id="login-email" placeholder="example@email.com" required>
+            <input type="email" id="login-email" required>
             <label for="login-password">CONTRASEÑA</label>
-            <input type="password" id="login-password" placeholder="******" required>
+            <input type="password" id="login-password" required>
             <div class="tabBox__news">
 
                 <label class="tabBox__switch" id="switch">
                     <input type="checkbox" class="tabBox__form-checkbox">
                     <span class="tabBox__slider round"></span>
                 </label>
-                <label for="switch">Subscribirse al Newsletter</label>
+                <label for="switch" class="tabBox__switch-label">Subscribirse al Newsletter</label>
             </div>
             <button type="submit">Ingreso</button>
             <div class="tabBox__forgotPass">
