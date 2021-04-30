@@ -190,7 +190,7 @@ $_item = null;
                     </div>
                 <?php endif; ?>
                 <div class="products wrapper grid products-grid products-<?= $block->escapeHtmlAttr($type) ?>">
-                    <ol class="products list items product-items">
+                    <ol class="products list items product-items regular slider">
                         <?php foreach ($items as $_item):?>
                             <?php $available = ''; ?>
                             <?php if (!$_item->isComposite() && $_item->isSaleable() && $type == 'related'):?>
@@ -266,3 +266,15 @@ $_item = null;
             </script>
         <?php endif;?>
         <?php endif;?>
+        <script type="text/javascript">
+            require(['jquery', 'jquery/ui', 'slick'], function($) {
+                $(document).ready(function() {
+                    $(".regular").slick({
+                        dots: false,
+                        infinite: true,
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    });
+                });
+            });
+        </script>
