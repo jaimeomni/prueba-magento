@@ -269,7 +269,7 @@ $_item = null;
         <script type="text/javascript">
             require(['jquery', 'jquery/ui', 'slick'], function($) {
                 $(document).ready(function() {
-                    $(".regular").slick({
+                    $(".regular").not('.slick-initialized').slick({
                         dots: false,
                         infinite: true,
                         slidesToShow: 3,
